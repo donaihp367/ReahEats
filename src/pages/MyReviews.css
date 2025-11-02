@@ -1,0 +1,158 @@
+.my-reviews-page {
+  min-height: 100vh;
+  background: var(--neutral-50);
+}
+
+.page-header {
+  text-align: center;
+  margin-bottom: calc(var(--spacing-unit) * 6);
+}
+
+.page-header h1 {
+  color: var(--neutral-900);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.page-subtitle {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+}
+
+.my-reviews-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.my-review-card {
+  background: white;
+  border-radius: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.my-review-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.review-restaurant-link {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 2);
+  padding: calc(var(--spacing-unit) * 2);
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 2px solid var(--neutral-100);
+  transition: background-color 0.2s ease;
+}
+
+.review-restaurant-link:hover {
+  background-color: var(--neutral-50);
+  color: inherit;
+}
+
+.review-restaurant-image {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: calc(var(--spacing-unit) * 1);
+}
+
+.review-restaurant-info {
+  flex: 1;
+}
+
+.review-restaurant-name {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+  color: var(--neutral-900);
+}
+
+.review-restaurant-cuisine {
+  font-size: 0.95rem;
+  color: var(--neutral-600);
+}
+
+.review-content {
+  padding: calc(var(--spacing-unit) * 3);
+}
+
+.review-rating-date {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.review-date-text {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+.review-title-text {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  color: var(--neutral-900);
+}
+
+.review-comment-text {
+  line-height: 1.6;
+  color: var(--neutral-700);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.review-card-actions {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 1.5);
+  padding-top: calc(var(--spacing-unit) * 2);
+  border-top: 1px solid var(--neutral-200);
+}
+
+.empty-state-card {
+  background: white;
+  border-radius: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--shadow-md);
+  padding: calc(var(--spacing-unit) * 8);
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.empty-state-icon {
+  font-size: 5rem;
+  margin-bottom: calc(var(--spacing-unit) * 3);
+  filter: grayscale(30%);
+}
+
+.empty-state-card h2 {
+  color: var(--neutral-900);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.empty-state-card p {
+  font-size: 1.125rem;
+  color: var(--neutral-600);
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .my-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .review-card-actions {
+    flex-direction: column;
+  }
+
+  .review-card-actions .btn {
+    width: 100%;
+  }
+}

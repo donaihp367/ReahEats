@@ -1,0 +1,108 @@
+.navbar {
+  background: white;
+  box-shadow: var(--shadow-sm);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.navbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: calc(var(--spacing-unit) * 2);
+  padding-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 1.5);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--neutral-900);
+  text-decoration: none;
+  transition: transform 0.2s ease;
+}
+
+.navbar-brand:hover {
+  transform: scale(1.05);
+  color: var(--neutral-900);
+}
+
+.logo-icon {
+  font-size: 2rem;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.logo-text {
+  font-family: 'Playfair Display', serif;
+  color: var(--color-primary);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.nav-link {
+  color: var(--neutral-700);
+  font-weight: 500;
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+  border-radius: calc(var(--spacing-unit) * 1);
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover {
+  color: var(--color-primary);
+  background-color: var(--neutral-50);
+}
+
+.nav-link:hover::after {
+  width: 80%;
+}
+
+.navbar-user {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.user-email {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 1.5);
+  background-color: var(--neutral-100);
+  border-radius: calc(var(--spacing-unit) * 1);
+}
+
+@media (max-width: 768px) {
+  .navbar-links {
+    flex-wrap: wrap;
+    gap: calc(var(--spacing-unit) * 1.5);
+  }
+
+  .user-email {
+    display: none;
+  }
+
+  .nav-link {
+    font-size: 0.875rem;
+    padding: calc(var(--spacing-unit) * 0.5) calc(var(--spacing-unit) * 1);
+  }
+}

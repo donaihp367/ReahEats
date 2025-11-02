@@ -1,0 +1,231 @@
+.restaurant-detail-page {
+  min-height: 100vh;
+  background: var(--neutral-50);
+}
+
+.restaurant-hero {
+  position: relative;
+  height: 400px;
+  overflow: hidden;
+}
+
+.restaurant-hero-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.restaurant-hero-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
+  padding: calc(var(--spacing-unit) * 4) 0;
+}
+
+.restaurant-hero-content {
+  color: white;
+}
+
+.restaurant-name {
+  font-size: 3rem;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.restaurant-meta {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 3);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  font-size: 1.1rem;
+}
+
+.cuisine-tag {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  padding: calc(var(--spacing-unit) * 1) calc(var(--spacing-unit) * 2);
+  border-radius: calc(var(--spacing-unit) * 3);
+  font-weight: 600;
+}
+
+.location-text {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 1);
+}
+
+.restaurant-rating-summary {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.rating-summary-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.restaurant-info-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: calc(var(--spacing-unit) * 4);
+  margin-bottom: calc(var(--spacing-unit) * 4);
+}
+
+.info-card {
+  flex: 1;
+  background: white;
+  padding: calc(var(--spacing-unit) * 4);
+  border-radius: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--shadow-md);
+}
+
+.info-card h2 {
+  margin-bottom: calc(var(--spacing-unit) * 2);
+  color: var(--neutral-900);
+}
+
+.restaurant-description-full {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: calc(var(--spacing-unit) * 3);
+}
+
+.restaurant-address {
+  color: var(--neutral-600);
+  font-size: 1rem;
+}
+
+.btn-add-review {
+  flex-shrink: 0;
+  height: fit-content;
+  padding: calc(var(--spacing-unit) * 2) calc(var(--spacing-unit) * 4);
+  font-size: 1.1rem;
+}
+
+.auth-prompt {
+  background: white;
+  padding: calc(var(--spacing-unit) * 3);
+  border-radius: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--shadow-md);
+  text-align: center;
+}
+
+.auth-prompt p {
+  color: var(--neutral-700);
+  font-size: 1.05rem;
+}
+
+.reviews-section {
+  background: white;
+  padding: calc(var(--spacing-unit) * 5);
+  border-radius: calc(var(--spacing-unit) * 2);
+  box-shadow: var(--shadow-md);
+}
+
+.reviews-title {
+  margin-bottom: calc(var(--spacing-unit) * 4);
+  color: var(--neutral-900);
+}
+
+.reviews-list {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing-unit) * 3);
+}
+
+.review-card {
+  padding: calc(var(--spacing-unit) * 3);
+  border: 2px solid var(--neutral-200);
+  border-radius: calc(var(--spacing-unit) * 2);
+  transition: all 0.2s ease;
+}
+
+.review-card:hover {
+  border-color: var(--neutral-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.review-author-info {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--spacing-unit) * 2);
+}
+
+.review-author-avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.review-author {
+  font-weight: 600;
+  color: var(--neutral-900);
+  margin-bottom: calc(var(--spacing-unit) * 0.5);
+}
+
+.review-date {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+.review-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: calc(var(--spacing-unit) * 1.5);
+  color: var(--neutral-900);
+}
+
+.review-comment {
+  line-height: 1.7;
+  color: var(--neutral-700);
+  margin-bottom: calc(var(--spacing-unit) * 2);
+}
+
+.review-actions {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 1.5);
+}
+
+.empty-reviews {
+  text-align: center;
+  padding: calc(var(--spacing-unit) * 6);
+  color: var(--neutral-600);
+  font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+  .restaurant-hero {
+    height: 300px;
+  }
+
+  .restaurant-name {
+    font-size: 2rem;
+  }
+
+  .restaurant-info-section {
+    flex-direction: column;
+  }
+
+  .btn-add-review {
+    width: 100%;
+  }
+}
